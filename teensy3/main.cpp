@@ -1,3 +1,4 @@
+#ifdef TEENSY_USE_EXAMPLE_MAIN
 #include "WProgram.h"
 
 extern "C" int main(void)
@@ -25,4 +26,4 @@ extern "C" int main(void)
 	}
 #endif
 }
-
+#endif // TEENSY_USE_EXAMPLE_MAIN
