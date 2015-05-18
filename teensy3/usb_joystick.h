@@ -70,6 +70,10 @@ class usb_joystick_class
 		if (--num >= 17) return;
 		analog16(num + 6, position);
 	}
+  void axis(unsigned int num, unsigned int position) {
+    if (num >= 24) return;
+    analog16(num, position);
+  }
         inline void hat(unsigned int num, int angle) {
 		uint32_t val=15;
 		if (angle > 0 && angle < 23) val = 0;
