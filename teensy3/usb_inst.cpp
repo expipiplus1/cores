@@ -63,7 +63,7 @@ FlightSimClass FlightSim;
 usb_seremu_class Serial;
 #endif
 
-#ifdef JOYSTICK_INTERFACE
+#if defined(USB_HID) || defined(USB_SERIAL_HID)
 usb_joystick_class Joystick;
 uint8_t usb_joystick_class::manual_mode = 0;
 #endif
