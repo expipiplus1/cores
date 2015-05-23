@@ -455,7 +455,9 @@ void startup_early_hook(void)		__attribute__ ((weak, alias("startup_default_earl
 void startup_late_hook(void)		__attribute__ ((weak, alias("startup_default_late_hook")));
 
 
+#if !defined(__clang__)
 __attribute__ ((section(".startup")))
+#endif
 void ResetHandler(void)
 {
 	uint32_t *src = &_etext;
